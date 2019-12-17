@@ -1,0 +1,6 @@
+[submodule "_app"]
+	path = _app
+	url = https://github.com/ysknk/gulp-starter-kit
+[submodule ".base_src"]
+	path = .base_src
+	url = https://github.com/ysknk/gulp-starter-src
