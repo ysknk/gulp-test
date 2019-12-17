@@ -56,7 +56,7 @@
  *
  *
  *
- * webpack@4.41.0 (MIT)
+ * webpack@4.41.3 (MIT)
  *   author: Tobias Koppers @sokra
  *   url: git+https://github.com/webpack/webpack.git
  *
