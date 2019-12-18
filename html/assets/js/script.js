@@ -540,23 +540,43 @@ __webpack_require__.r(__webpack_exports__);
   'use strict';
 
   var PREFIX = 'site-';
-  if (!win['PREFIX']) win['PREFIX'] = PREFIX;
-  var NS = '$';
-  if (!win['NS']) win['NS'] = NS;
-  if (!win[NS]) win[NS] = {}; // lodash minimal add
 
-  if (!win['_']) win['_'] = {};
-  win['_'] = {
-    merge: __webpack_require__(3),
-    extend: __webpack_require__(101),
-    forEach: __webpack_require__(103),
-    template: __webpack_require__(112),
-    isObject: __webpack_require__(30),
-    isFunction: __webpack_require__(22),
-    throttle: __webpack_require__(130),
-    debounce: __webpack_require__(131),
-    orderBy: __webpack_require__(134)
-  };
+  if (win['PREFIX']) {
+    console.error("window.PREFIX [".concat(PREFIX, "] dupricated."));
+  } else {
+    win['PREFIX'] = PREFIX;
+  }
+
+  var NS = '$';
+
+  if (win['NS']) {
+    console.error("window.NS dupricated.");
+  } else {
+    win['NS'] = NS;
+
+    if (win[NS]) {
+      console.error("window.".concat(NS, " dupricated."));
+    } else {
+      win[NS] = {};
+    }
+  } // lodash minimal add
+
+
+  if (win['_']) {
+    console.error("window._ dupricated.");
+  } else {
+    win['_'] = {
+      merge: __webpack_require__(3),
+      extend: __webpack_require__(101),
+      forEach: __webpack_require__(103),
+      template: __webpack_require__(112),
+      isObject: __webpack_require__(30),
+      isFunction: __webpack_require__(22),
+      throttle: __webpack_require__(130),
+      debounce: __webpack_require__(131),
+      orderBy: __webpack_require__(134)
+    };
+  }
 })(window, document));
 
 /***/ }),
