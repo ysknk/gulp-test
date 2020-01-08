@@ -455,20 +455,20 @@
 .site-base .site-accordion_content > div {
   padding-bottom: 10em;
 }
-.site-base [data-intersection].fadein.is-intersection-init {
+.site-base .intersection-fadein.is-intersection-init {
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
   -webkit-transition: opacity 0.2s ease-in-out;
   transition: opacity 0.2s ease-in-out;
 }
-.site-base [data-intersection].fadein.is-intersection-in {
+.site-base .intersection-fadein.is-intersection-in {
   opacity: 1;
   -webkit-filter: none;
   -ms-filter: none;
   filter: none;
 }
-.site-base [data-intersection].fadein.is-intersection-out {
+.site-base .intersection-fadein.is-intersection-out {
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);

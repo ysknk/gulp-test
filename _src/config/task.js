@@ -5,7 +5,7 @@ const FILE_NAME = ``;// default index.html
 
 const ASSETS_PATH = `assets/`
 
-let meta = require(`../page.js`);
+let meta = require(`./page.js`);
 
 module.exports = {
 
@@ -144,7 +144,7 @@ module.exports = {
 
     meta,
 
-    assets_path: '/assets/',//base path
+    assets_path: `/${ASSETS_PATH}`,//base path
     htdocsdir: define.path.htdocs
   }
 };

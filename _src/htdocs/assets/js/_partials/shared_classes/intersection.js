@@ -5,7 +5,7 @@ export default ((win, doc) => {
 
   /**
    * Intersection
-   * <div data-intersection='{"action": "fadeout", "threshold": 0.2, "callback": {"in": "onIn"}}'>hoge</div>
+   * <div data-intersection='{"action": "intersection-fadeout", "threshold": 0.2, "callback": {"in": "onIn"}}'>hoge</div>
    */
   return class Intersection {
 
@@ -27,7 +27,7 @@ export default ((win, doc) => {
           in: 'is-intersection-in',
           out: 'is-intersection-out'
         },
-        action: 'fadein',
+        action: 'intersection-fadein',
         isOnce: true,
         src: '',// image src
         threshold: 0.3,// 0 - 1.0 -> screen top - bottom
@@ -80,6 +80,7 @@ export default ((win, doc) => {
       _.forEach(elems, (elem, i) => {
         let data = this.getParseData(elem);
         data = _.merge({}, this.options, data);
+        if (elem.classList.contains(data.classname.init)) return;
 
         elem.classList.add(data.classname.init);
         elem.classList.add(data.action);
@@ -99,6 +100,9 @@ export default ((win, doc) => {
       _.forEach(elems, (elem, i) => {
         let data = this.getParseData(elem);
         data = _.merge({}, this.options, data);
+
+        if (data.isOnce
+          && elem.classList.contains(data.classname.in)) return;
 
         let targetData = this.getTargetData(elem);
         let thresholdDiff = windowData.height * data.threshold;
@@ -143,6 +147,9 @@ export default ((win, doc) => {
           data.callback.in
             && _.isFunction(this[data.callback.in])
             && this[data.callback.in](elem, data);
+        }
+        if (data.isOnce) {
+          elem.removeAttribute(this.dataAttr);
         }
       }
     }

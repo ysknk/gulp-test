@@ -14792,7 +14792,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   var FN = win[NS];
   /**
    * Intersection
-   * <div data-intersection='{"action": "fadeout", "threshold": 0.2, "callback": {"in": "onIn"}}'>hoge</div>
+   * <div data-intersection='{"action": "intersection-fadeout", "threshold": 0.2, "callback": {"in": "onIn"}}'>hoge</div>
    */
 
   return (
@@ -14817,7 +14817,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             in: 'is-intersection-in',
             out: 'is-intersection-out'
           },
-          action: 'fadein',
+          action: 'intersection-fadein',
           isOnce: true,
           src: '',
           // image src
@@ -14882,6 +14882,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             var data = _this.getParseData(elem);
 
             data = _.merge({}, _this.options, data);
+            if (elem.classList.contains(data.classname.init)) return;
             elem.classList.add(data.classname.init);
             elem.classList.add(data.action);
             elem.classList.remove(data.classname.in);
@@ -14905,6 +14906,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             var data = _this2.getParseData(elem);
 
             data = _.merge({}, _this2.options, data);
+            if (data.isOnce && elem.classList.contains(data.classname.in)) return;
 
             var targetData = _this2.getTargetData(elem);
 
@@ -14945,6 +14947,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
             if (data.callback) {
               data.callback.in && _.isFunction(this[data.callback.in]) && this[data.callback.in](elem, data);
+            }
+
+            if (data.isOnce) {
+              elem.removeAttribute(this.dataAttr);
             }
           }
         }
