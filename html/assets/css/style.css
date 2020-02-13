@@ -2,6 +2,7 @@
 .site-base {
   margin: 0;
   padding: 0;
+  min-width: 375px;
   outline: 0;
   border: 0;
   background: #fff;
@@ -14,7 +15,7 @@
   font-size: 100%;
   font-size: 16px;
   font-family: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, "Segoe UI", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Arial, "メイリオ", Meiryo, sans-serif;
   line-height: 1;
   line-height: 1.5;
 
@@ -149,25 +150,14 @@
 .site-base [hidden] {
   display: none;
 }
-.layout-pc .site-base {
-  min-width: 960px;
+.site-base .site-display-inline-block {
+  display: inline-block;
 }
 .layout-pc .site-base .site-display-none.-pc {
   display: none !important;
 }
-.layout-tab .site-base {
-  width: 100%;
-}
 .layout-tab .site-base .site-display-none.-tab {
   display: none !important;
-}
-.layout-sp .site-base {
-  min-width: 320px;
-  width: 100%;
-}
-.layout-sp .site-base img {
-  width: 100%;
-  height: auto;
 }
 .layout-sp .site-base .site-display-none.-sp {
   display: none !important;
@@ -250,7 +240,7 @@
   border: none;
   background: #fff;
   font-size: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, "Segoe UI", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Arial, "メイリオ", Meiryo, sans-serif;
   line-height: inherit;
 
   -webkit-appearance: none;
@@ -274,7 +264,7 @@
   border: none;
   background: none;
   font-size: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, "Segoe UI", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Arial, "メイリオ", Meiryo, sans-serif;
   line-height: inherit;
 
   -webkit-appearance: none;
@@ -352,6 +342,8 @@
 }
 .site-base img {
   max-width: 100%;
+  width: 100%;
+  height: auto;
   vertical-align: top;
 }
 .site-base picture {
