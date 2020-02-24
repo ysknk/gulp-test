@@ -12326,6 +12326,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         this.isScrollingClassName = "is-scrolling";
         this.easing = 'easeInOutQuart';
         this.duration = 500;
+        this.diffOffsetY = 0;
         _.isObject(opts_) && _.extend(this, opts_); // this.initialize();
       }
       /**
@@ -12416,6 +12417,17 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           win.history.pushState({}, '', hash ? "#".concat(hash) : '');
         }
         /**
+         * setDiffOffsetY
+         *
+         * @param {number} posY
+         */
+
+      }, {
+        key: "setDiffOffsetY",
+        value: function setDiffOffsetY(posY) {
+          this.diffOffsetY = posY;
+        }
+        /**
          * getOffsetPos
          *
          * @param {object} elem element
@@ -12474,7 +12486,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           baseElem.classList.add(this.isScrollingClassName);
           FN.anime({
             targets: scrollPos,
-            y: elemPos.y,
+            y: elemPos.y - this.diffOffsetY,
             duration: this.duration,
             easing: this.easing,
             update: function update() {
@@ -13173,7 +13185,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           return new Modal(opts_);
         }
 
-        this.baseElem = 'body';
+        this.baseElem = '#wrapper';
         this.isFixed = true;
         this.isSetHeight = false;
         this.styles = {
@@ -13190,13 +13202,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         this.alignRightElem = '.js-fixed-right';
         this.name = {};
         this.name.modal = "".concat(PREFIX, "modal");
-        this.name.close = "".concat(this.name.modal, "_close");
-        this.name.container = "".concat(this.name.modal, "_container");
-        this.name.wrapper = "".concat(this.name.modal, "_wrapper");
-        this.name.outer = "".concat(this.name.modal, "_outer");
-        this.name.background = "".concat(this.name.modal, "_background");
-        this.name.inner = "".concat(this.name.modal, "_inner");
-        this.name.content = "".concat(this.name.modal, "_content");
+        this.name.close = "".concat(this.name.modal, "__close");
+        this.name.container = "".concat(this.name.modal, "__container");
+        this.name.wrapper = "".concat(this.name.modal, "__wrapper");
+        this.name.outer = "".concat(this.name.modal, "__outer");
+        this.name.background = "".concat(this.name.modal, "__background");
+        this.name.inner = "".concat(this.name.modal, "__inner");
+        this.name.content = "".concat(this.name.modal, "__content");
         this.name.notScroller = 'js-not-scroller';
         this.dataAttr = {
           open: 'data-modal-open',
@@ -13221,7 +13233,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             easing: 'easeInOutQuart'
           }
         };
-        this.template = ['', "<div id=\"".concat(this.name.wrapper, "\">"), "<div id=\"".concat(this.name.outer, "\">"), "<div id=\"".concat(this.name.background, "\" data-modal-close=\"\" onclick=\"\"></div>"), "<div id=\"".concat(this.name.inner, "\">"), "<div id=\"".concat(this.name.container, "\">"), "<div id=\"".concat(this.name.close, "\">"), "<a href=\"javascript:void(0)\" data-modal-close=\"\" onclick=\"\"></a>", "</div>", "<div id=\"".concat(this.name.content, "\"></div>"), "</div>", "</div>", "</div>", "</div>"].join('');
+        this.template = ['', "<div id=\"".concat(this.name.wrapper, "\" data-modal-close=\"\" onclick=\"\">"), "<div id=\"".concat(this.name.outer, "\">"), "<div id=\"".concat(this.name.background, "\"></div>"), "<div id=\"".concat(this.name.inner, "\">"), "<div id=\"".concat(this.name.container, "\">"), "<div id=\"".concat(this.name.close, "\">"), "<a href=\"javascript:void(0)\" data-modal-close=\"\" onclick=\"\"></a>", "</div>", "<div id=\"".concat(this.name.content, "\"></div>"), "</div>", "</div>", "</div>", "</div>"].join('');
         _.isObject(opts_) && _.extend(this, opts_); // this.initialize();
       }
       /**

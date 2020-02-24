@@ -50,14 +50,15 @@ script#modal1(type="text/template")
   | <% } %>
 ```
 */
-#{p}modal
-  $this = selector('^[1..-1]')
+#{$p}modal
+  $this = selector('^[2..-1]')
   $close_size = 1em
 
-  &_container
+  &__container
     relative top 0 left 0
+    pointer-events auto
 
-  &_close
+  &__close
     absolute top 0 right 0
     a
       relative top 0 left 0
@@ -78,55 +79,49 @@ script#modal1(type="text/template")
       &::after
         transform rotate(-45deg)
 
-  &_content
+  &__content
     clear both
     overflow hidden
-    border-radius(15px)
     background #fff
     // padding-top close_size
 
-  &_wrapper
-    absolute top 0 left 0
-    width 100%
-    height 100%
-    z-index 0
-
-  &_background
-    absolute top 0 left 0
-    z-index 0
-    width 100%
-    height 100%
-    background #000
-    opacity .6
-
-  &_outer
+  &__wrapper
     overflow auto
-    box-sizing border-box
-    max-width 100%
-    width ($wsp)px
-    padding-right 20px
-    padding-left @padding-right
+    absolute top 0 left 0
+    width 100%
     height 100%
-    margin-right auto
-    margin-left @margin-right
+    z-index 0
+    text-align center
     &::before
       content ''
       display inline-block
       width 0
       height 100%
       vertical-align middle
-    // &::after
-    //   content ''
-    //   display block
-    //   absolute top 0 left 0
-    //   z-index 1
-    //   width 100%
-    //   height 100%
 
-  &_inner
-    relative top 0 left 0
-    z-index 10
+  &__background
+    fixed top 0 left 0
+    z-index 0
+    width 100%
+    height 100%
+    background #000
+    opacity .6
+    pointer-events none
+
+  &__outer
     display inline-block
     vertical-align middle
+    box-sizing border-box
+    max-width 100%
+    width ($wpc)px
+    padding-right 20px
+    padding-left @padding-right
+    margin-right auto
+    margin-left @margin-right
+
+  &__inner
+    relative top 0 left 0
+    z-index 10
     width 100%
+    height 100%
 
