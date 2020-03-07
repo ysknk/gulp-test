@@ -539,7 +539,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ((function (win, doc) {
   'use strict';
 
-  var PREFIX = 'site-';
+  var PREFIX = "site-";
 
   if (win['PREFIX']) {
     console.error("window.PREFIX [".concat(PREFIX, "] dupricated."));
