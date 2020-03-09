@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../../../aigis_assets/css/uikit.css" rel="stylesheet">
+    <script src="../../../aigis_assets/js/uikit.js"></script>
+    <script src="../../../aigis_assets/js/uikit-icons.js"></script>
+    <link href="../../../aigis_assets/css/highlight/okadia.css" rel="stylesheet">
+    <link href="../../../aigis_assets/css/theme.css" rel="stylesheet">
+    <link href="../../../aigis_assets/css/custom.css" rel="stylesheet">
+    <link href="../../../../assets/css/style.css" rel="stylesheet">
+    <script src="../../../../assets/js/script.js"></script>
+  </head>
+  <body>
+    <div class="tm-container">
+      <div class="uk-scope">
+        <header class="uk-navbar-container tm-navbar-container uk-sticky">
+          <div class="uk-container uk-container-expand">
+            <div class="uk-navbar">
+              <div class="uk-navbar-left"><a href="../../../index.html" class="uk-navbar-item uk-logo">Styleguide</a></div>
+              <div class="uk-navbar-right"><a href="#offcanvas-slide" uk-toggle uk-navbar-toggle-icon class="uk-navbar-toggle uk-navbar-toggle-icon uk-icon"></a></div>
+            </div>
+          </div>
+        </header>
+      </div>
+      <main>
+        <article class="tm-article">
+          <nav class="uk-scope">
+            <h2 class="uk-h2"><span>COMPONENTS</span></h2>
+            <ul class="uk-list uk-list-bullet">
+              <li><a href="#tab" class="uk-link-reset">tab</a></li>
+            </ul>
+          </nav>
+          <div class="uk-scope">
+            <hr class="uk-margin-large">
+          </div>
+          <div class="aigis-module">
+            <div class="uk-scope">
+              <h2 id="tab" class="uk-h2">tab</h2>
+            </div>
+            <div class="aigis-module__filepath">../_src/htdocs/assets/css/partials/components/_1_tab.styl</div>
+            <div class="uk-scope">
+              <nav data-uk-margin>
+<a href="../../../tag/base/index.html" class="tm-inline-block tm-line-height-reset uk-link-reset"><span class="uk-label uk-label-base">base</span></a>
+<a href="../../../tag/latest/index.html" class="tm-inline-block tm-line-height-reset uk-link-reset"><span class="uk-label uk-label-latest">latest</span></a>
+<a href="../../../tag/pc/index.html" class="tm-inline-block tm-line-height-reset uk-link-reset"><span class="uk-label uk-label-pc">pc</span></a>
+<a href="../../../tag/sp/index.html" class="tm-inline-block tm-line-height-reset uk-link-reset"><span class="uk-label uk-label-sp">sp</span></a>
+<a href="../../../tag/js/index.html" class="tm-inline-block tm-line-height-reset uk-link-reset"><span class="uk-label uk-label-js">js</span></a>
+<a href="../../../tag/data/index.html" class="tm-inline-block tm-line-height-reset uk-link-reset"><span class="uk-label uk-label-data">data</span></a>
+              </nav>
+            </div><p>tab styles</p>
+<ul>
+<li>Base tab style.</li>
+<li>Use [data-tab].</li>
+</ul>
+<div class="aigis-preview site-base">
+  <div class="site-tab">
+    <nav class="site-tab_nav">
+        <ul>
+            <li><a class="is-active" href="javascript:void(0)" data-tab="{&quot;btn&quot;:&quot;.site-tab li a&quot;,&quot;group&quot;:&quot;.site-tab .site-tab_group > div&quot;,&quot;category&quot;:&quot;.content1&quot;}">nav1</a></li>
+            <li><a href="javascript:void(0)" data-tab="{&quot;btn&quot;:&quot;.site-tab li a&quot;,&quot;group&quot;:&quot;.site-tab .site-tab_group > div&quot;,&quot;category&quot;:&quot;.content2&quot;}">nav2</a></li>
+            <li><a href="javascript:void(0)" data-tab="{&quot;btn&quot;:&quot;.site-tab li a&quot;,&quot;group&quot;:&quot;.site-tab .site-tab_group > div&quot;,&quot;category&quot;:&quot;.content3&quot;}">nav3</a></li>
+        </ul>
+    </nav>
+    <div class="site-tab_group">
+        <div class="content1">content1</div>
+        <div class="content2">content2</div>
+        <div class="content3">content3</div>
+    </div>
+</div></div>
+
+<pre><code class="language-html"><span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>div</span> <span class="token attr-name" >class</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>site-tab<span class="token punctuation" >"</span></span><span class="token punctuation" >></span></span>
+  <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>nav</span> <span class="token attr-name" >class</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>site-tab_nav<span class="token punctuation" >"</span></span><span class="token punctuation" >></span></span>
+    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>ul</span><span class="token punctuation" >></span></span>
+      <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>li</span><span class="token punctuation" >></span></span><span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>a</span> <span class="token attr-name" >class</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>is-active<span class="token punctuation" >"</span></span> <span class="token attr-name" >href</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>javascript:void(0)<span class="token punctuation" >"</span></span> <span class="token attr-name" >data-tab</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>{&amp;quot;btn&amp;quot;:&amp;quot;.site-tab li a&amp;quot;,&amp;quot;group&amp;quot;:&amp;quot;.site-tab .site-tab_group <span class="token punctuation" >></span> div&amp;quot;,&amp;quot;category&amp;quot;:&amp;quot;.content1&amp;quot;}<span class="token punctuation" >"</span></span><span class="token punctuation" >></span></span>nav1<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>a</span><span class="token punctuation" >></span></span><span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>li</span><span class="token punctuation" >></span></span>
+      <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>li</span><span class="token punctuation" >></span></span><span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>a</span> <span class="token attr-name" >href</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>javascript:void(0)<span class="token punctuation" >"</span></span> <span class="token attr-name" >data-tab</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>{&amp;quot;btn&amp;quot;:&amp;quot;.site-tab li a&amp;quot;,&amp;quot;group&amp;quot;:&amp;quot;.site-tab .site-tab_group <span class="token punctuation" >></span> div&amp;quot;,&amp;quot;category&amp;quot;:&amp;quot;.content2&amp;quot;}<span class="token punctuation" >"</span></span><span class="token punctuation" >></span></span>nav2<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>a</span><span class="token punctuation" >></span></span><span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>li</span><span class="token punctuation" >></span></span>
+      <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>li</span><span class="token punctuation" >></span></span><span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>a</span> <span class="token attr-name" >href</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>javascript:void(0)<span class="token punctuation" >"</span></span> <span class="token attr-name" >data-tab</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>{&amp;quot;btn&amp;quot;:&amp;quot;.site-tab li a&amp;quot;,&amp;quot;group&amp;quot;:&amp;quot;.site-tab .site-tab_group <span class="token punctuation" >></span> div&amp;quot;,&amp;quot;category&amp;quot;:&amp;quot;.content3&amp;quot;}<span class="token punctuation" >"</span></span><span class="token punctuation" >></span></span>nav3<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>a</span><span class="token punctuation" >></span></span><span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>li</span><span class="token punctuation" >></span></span>
+    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>ul</span><span class="token punctuation" >></span></span>
+  <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>nav</span><span class="token punctuation" >></span></span>
+  <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>div</span> <span class="token attr-name" >class</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>site-tab_group<span class="token punctuation" >"</span></span><span class="token punctuation" >></span></span>
+    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>div</span> <span class="token attr-name" >class</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>content1<span class="token punctuation" >"</span></span><span class="token punctuation" >></span></span>content1<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>div</span><span class="token punctuation" >></span></span>
+    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>div</span> <span class="token attr-name" >class</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>content2<span class="token punctuation" >"</span></span><span class="token punctuation" >></span></span>content2<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>div</span><span class="token punctuation" >></span></span>
+    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>div</span> <span class="token attr-name" >class</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>content3<span class="token punctuation" >"</span></span><span class="token punctuation" >></span></span>content3<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>div</span><span class="token punctuation" >></span></span>
+  <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>div</span><span class="token punctuation" >></span></span>
+<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>div</span><span class="token punctuation" >></span></span>
+</code></pre>
+<pre><code class="language-jade"><span class="token tag" >div<span class="token attributes" ><span class="token punctuation" >(</span><span class="token attr-name" >class</span><span class="token punctuation" >=</span><span class="token attr-value" ><span class="token template-string" ><span class="token string" >`</span><span class="token interpolation" ><span class="token interpolation-punctuation punctuation" >${</span>p<span class="token interpolation-punctuation punctuation" >}</span></span><span class="token string" >tab`</span></span></span><span class="token punctuation" >)</span></span></span>
+  <span class="token tag" >nav<span class="token attributes" ><span class="token punctuation" >(</span><span class="token attr-name" >class</span><span class="token punctuation" >=</span><span class="token attr-value" ><span class="token template-string" ><span class="token string" >`</span><span class="token interpolation" ><span class="token interpolation-punctuation punctuation" >${</span>p<span class="token interpolation-punctuation punctuation" >}</span></span><span class="token string" >tab_nav`</span></span></span><span class="token punctuation" >)</span></span></span>
+    <span class="token tag" >ul</span>
+      <span class="token tag" >li<span class="token punctuation" >:</span></span> <span class="token tag" >a<span class="token attributes" ><span class="token punctuation" >(</span><span class="token attr-name" >class</span><span class="token punctuation" >=</span><span class="token attr-value" ><span class="token string" >"is-active"</span> href<span class="token operator" >=</span>"javascript<span class="token punctuation" >:</span><span class="token keyword" >void</span><span class="token punctuation" >(</span><span class="token number" >0</span></span><span class="token punctuation" >)</span></span></span>" data<span class="token punctuation" >-</span>tab<span class="token punctuation" >!=</span>"{&amp;quot;btn&amp;quot;:&amp;quot;<span class="token punctuation" >.</span>site<span class="token punctuation" >-</span>tab li a&amp;quot;,&amp;quot;group&amp;quot;:&amp;quot;<span class="token punctuation" >.</span>site<span class="token punctuation" >-</span>tab <span class="token punctuation" >.</span>site<span class="token punctuation" >-</span>tab_group > div&amp;quot;,&amp;quot;category&amp;quot;:&amp;quot;<span class="token punctuation" >.</span>content1&amp;quot;}") nav1
+      <span class="token tag" >li<span class="token punctuation" >:</span></span> <span class="token tag" >a<span class="token attributes" ><span class="token punctuation" >(</span><span class="token attr-name" >href</span><span class="token punctuation" >=</span><span class="token attr-value" >"javascript<span class="token punctuation" >:</span><span class="token keyword" >void</span><span class="token punctuation" >(</span><span class="token number" >0</span></span><span class="token punctuation" >)</span></span></span>" data<span class="token punctuation" >-</span>tab<span class="token punctuation" >!=</span>"{&amp;quot;btn&amp;quot;:&amp;quot;<span class="token punctuation" >.</span>site<span class="token punctuation" >-</span>tab li a&amp;quot;,&amp;quot;group&amp;quot;:&amp;quot;<span class="token punctuation" >.</span>site<span class="token punctuation" >-</span>tab <span class="token punctuation" >.</span>site<span class="token punctuation" >-</span>tab_group > div&amp;quot;,&amp;quot;category&amp;quot;:&amp;quot;<span class="token punctuation" >.</span>content2&amp;quot;}") nav2
+      <span class="token tag" >li<span class="token punctuation" >:</span></span> <span class="token tag" >a<span class="token attributes" ><span class="token punctuation" >(</span><span class="token attr-name" >href</span><span class="token punctuation" >=</span><span class="token attr-value" >"javascript<span class="token punctuation" >:</span><span class="token keyword" >void</span><span class="token punctuation" >(</span><span class="token number" >0</span></span><span class="token punctuation" >)</span></span></span>" data<span class="token punctuation" >-</span>tab<span class="token punctuation" >!=</span>"{&amp;quot;btn&amp;quot;:&amp;quot;<span class="token punctuation" >.</span>site<span class="token punctuation" >-</span>tab li a&amp;quot;,&amp;quot;group&amp;quot;:&amp;quot;<span class="token punctuation" >.</span>site<span class="token punctuation" >-</span>tab <span class="token punctuation" >.</span>site<span class="token punctuation" >-</span>tab_group > div&amp;quot;,&amp;quot;category&amp;quot;:&amp;quot;<span class="token punctuation" >.</span>content3&amp;quot;}") nav3
+  <span class="token tag" >div<span class="token attributes" ><span class="token punctuation" >(</span><span class="token attr-name" >class</span><span class="token punctuation" >=</span><span class="token attr-value" ><span class="token template-string" ><span class="token string" >`</span><span class="token interpolation" ><span class="token interpolation-punctuation punctuation" >${</span>p<span class="token interpolation-punctuation punctuation" >}</span></span><span class="token string" >tab_group`</span></span></span><span class="token punctuation" >)</span></span></span>
+    <span class="token tag" >div<span class="token attributes" ><span class="token punctuation" >(</span><span class="token attr-name" >class</span><span class="token punctuation" >=</span><span class="token attr-value" ><span class="token template-string" ><span class="token string" >`content1`</span></span></span><span class="token punctuation" >)</span></span></span> <span class="token plain-text" >content1</span>
+    <span class="token tag" >div<span class="token attributes" ><span class="token punctuation" >(</span><span class="token attr-name" >class</span><span class="token punctuation" >=</span><span class="token attr-value" ><span class="token template-string" ><span class="token string" >`content2`</span></span></span><span class="token punctuation" >)</span></span></span> <span class="token plain-text" >content2</span>
+    <span class="token tag" >div<span class="token attributes" ><span class="token punctuation" >(</span><span class="token attr-name" >class</span><span class="token punctuation" >=</span><span class="token attr-value" ><span class="token template-string" ><span class="token string" >`content3`</span></span></span><span class="token punctuation" >)</span></span></span> <span class="token plain-text" >content3</span>
+</code></pre>
+
+          </div>
+        </article>
+      </main>
+      <footer class="aigis-footer">Last update at 2020/03/09</footer>
+    </div>
+    <div id="offcanvas-slide" uk-offcanvas class="uk-offcanvas uk-scope">
+      <div class="uk-offcanvas-bar">
+        <aside>
+          <div class="uk-scope">
+            <div class="uk-container">
+              <h2 class="uk-h2">CATEGORIES</h2>
+              <nav>
+                <div class="uk-list uk-list-divider tm-collection-tree"><ul data-path-depth="0"><li data-path-depth="0"><a href="../../../category/components/index.html">components</a><ul data-path-depth="1"><li data-path-depth="1"><a href="../../../category/components/accordion/index.html">accordion</a></li><li data-path-depth="1"><a href="../../../category/components/ellipsis/index.html">ellipsis</a></li><li data-path-depth="1"><a href="../../../category/components/expander/index.html">expander</a></li><li data-path-depth="1"><a href="../../../category/components/intersection/index.html">intersection</a></li><li data-path-depth="1"><a href="../../../category/components/modal/index.html">modal</a></li><li data-path-depth="1"><a href="../../../category/components/tab/index.html" data-tree-current>tab</a></li></ul></li></ul>
+                </div>
+              </nav>
+              <h2 class="uk-h2">TAG</h2>
+              <nav data-uk-margin>
+<a href="../../../tag/base/index.html" class="tm-inline-block tm-line-height-reset uk-link-reset"><span class="uk-label uk-label-base">base</span></a>
+<a href="../../../tag/data/index.html" class="tm-inline-block tm-line-height-reset uk-link-reset"><span class="uk-label uk-label-data">data</span></a>
+<a href="../../../tag/js/index.html" class="tm-inline-block tm-line-height-reset uk-link-reset"><span class="uk-label uk-label-js">js</span></a>
+<a href="../../../tag/latest/index.html" class="tm-inline-block tm-line-height-reset uk-link-reset"><span class="uk-label uk-label-latest">latest</span></a>
+<a href="../../../tag/pc/index.html" class="tm-inline-block tm-line-height-reset uk-link-reset"><span class="uk-label uk-label-pc">pc</span></a>
+<a href="../../../tag/sp/index.html" class="tm-inline-block tm-line-height-reset uk-link-reset"><span class="uk-label uk-label-sp">sp</span></a>
+              </nav>
+              <h2 class="uk-h2"><a href="../../../color.html" class="uk-link-reset">ALL COLORS</a></h2>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </body>
+</html>
