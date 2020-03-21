@@ -201,5 +201,17 @@
       "_layouts/default.pug"
     ],
     "file": "test/index.pug"
+  },
+  "index_pug": {
+    "tree": {
+      "index.pug": {}
+    },
+    "files": [
+      "index.pug"
+    ],
+    "dependencies": [
+      "_layouts/default.pug"
+    ],
+    "file": "index.pug"
   }
 }
