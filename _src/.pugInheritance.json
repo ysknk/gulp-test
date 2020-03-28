@@ -1,4 +1,16 @@
 {
+  "index_pug": {
+    "tree": {
+      "index.pug": {}
+    },
+    "files": [
+      "index.pug"
+    ],
+    "dependencies": [
+      "_layouts/default.pug"
+    ],
+    "file": "index.pug"
+  },
   "_layouts_default_pug": {
     "tree": {
       "_layouts/default.pug": {
@@ -190,6 +202,18 @@
     "dependencies": [],
     "file": "_utilities/variable.pug"
   },
+  "test2_index_pug": {
+    "tree": {
+      "test2/index.pug": {}
+    },
+    "files": [
+      "test2/index.pug"
+    ],
+    "dependencies": [
+      "_layouts/default.pug"
+    ],
+    "file": "test2/index.pug"
+  },
   "test_index_pug": {
     "tree": {
       "test/index.pug": {}
@@ -201,17 +225,5 @@
       "_layouts/default.pug"
     ],
     "file": "test/index.pug"
-  },
-  "index_pug": {
-    "tree": {
-      "index.pug": {}
-    },
-    "files": [
-      "index.pug"
-    ],
-    "dependencies": [
-      "_layouts/default.pug"
-    ],
-    "file": "index.pug"
   }
 }
