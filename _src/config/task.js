@@ -20,7 +20,7 @@ module.exports = {
   tasks: {
     styleguide: true,
     iconfont: true,
-    mass_production: false,
+    mass_production: true,
   },
 
   /* common */
@@ -197,7 +197,7 @@ module.exports = {
 
     meta,
 
-    assets_path: `${ASSETS_PATH}`,//base path
+    root_path: `${START_PATH}`,//base path
     htdocsdir: define.path.htdocs
   }
 };
