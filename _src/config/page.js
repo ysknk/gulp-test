@@ -45,7 +45,7 @@ const head = {
   //   description,
   // },
   // twitter: {
-  //   url: `${url}`,
+  //   card: `summary_large_image`,
   // }
 };
 
@@ -66,7 +66,7 @@ module.exports = {
     // og: Object.assign({}, head.og, {
     //   type: `website`,
     //   title: 'top title',
-    //   description: 'inde description',
+    //   description: 'top description',
     // }),
     page_name: 'top-page',
     extension: '.html'
